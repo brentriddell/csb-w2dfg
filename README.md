@@ -9,9 +9,7 @@ The REST API documentation can be found [on help.openai.com](https://help.openai
 ## Installation
 
 ```sh
-npm install --save the-real-deal
-# or
-yarn add the-real-deal
+npm install the-real-deal
 ```
 
 ## Usage
@@ -68,15 +66,17 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const assistant = await theRealDeal.assistants.create({ model: 'string' }).catch((err) => {
-    if (err instanceof TheRealDeal.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
+  const assistantCreateResponse = await theRealDeal.assistants
+    .create({ model: 'string' })
+    .catch(async (err) => {
+      if (err instanceof TheRealDeal.APIError) {
+        console.log(err.status); // 400
+        console.log(err.name); // BadRequestError
+        console.log(err.headers); // {server: 'nginx', ...}
+      } else {
+        throw err;
+      }
+    });
 }
 
 main();
@@ -176,7 +176,7 @@ import TheRealDeal from 'the-real-deal';
 ```
 
 To do the inverse, add `import "the-real-deal/shims/node"` (which does import polyfills).
-This can also be useful if you are getting the wrong TypeScript types for `Response` - more details [here](https://github.com/the-real-deal/tree/main/src/_shims#readme).
+This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/brentriddell/csb-w2dfg/tree/main/src/_shims#readme)).
 
 You may also provide a custom `fetch` function when instantiating the client,
 which can be used to inspect or alter the `Request` or `Response` before/after each request:
@@ -186,7 +186,7 @@ import { fetch } from 'undici'; // as one example
 import TheRealDeal from 'the-real-deal';
 
 const client = new TheRealDeal({
-  fetch: async (url: RequestInfo, init?: RequestInfo): Promise<Response> => {
+  fetch: async (url: RequestInfo, init?: RequestInit): Promise<Response> => {
     console.log('About to make a request', url, init);
     const response = await fetch(url, init);
     console.log('Got response', response);
@@ -207,7 +207,7 @@ If you would like to disable or customize this behavior, for example to use the 
 <!-- prettier-ignore -->
 ```ts
 import http from 'http';
-import HttpsProxyAgent from 'https-proxy-agent';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 
 // Configure the default for all requests:
 const theRealDeal = new TheRealDeal({
@@ -215,10 +215,12 @@ const theRealDeal = new TheRealDeal({
 });
 
 // Override per-request:
-await theRealDeal.assistants.create({ model: 'string' }, {
-  baseURL: 'http://localhost:8080/test-api',
-  httpAgent: new http.Agent({ keepAlive: false }),
-})
+await theRealDeal.assistants.create(
+  { model: 'string' },
+  {
+    httpAgent: new http.Agent({ keepAlive: false }),
+  },
+);
 ```
 
 ## Semantic Versioning
@@ -231,7 +233,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/the-real-deal/the-real-deal-node/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/brentriddell/csb-w2dfg/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
