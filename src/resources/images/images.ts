@@ -1,4 +1,4 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from 'the-real-deal/resource';
 import * as EditsAPI from 'the-real-deal/resources/images/edits';
