@@ -1,4 +1,4 @@
-// File generated from our OpenAPI spec by Stainless.
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import TheRealDeal, { toFile } from 'the-real-deal';
 import { Response } from 'node-fetch';
