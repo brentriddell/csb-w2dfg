@@ -1,6 +1,6 @@
 {
   "name": "the-real-deal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The official TypeScript library for the The Real Deal API",
   "author": "The Real Deal <dev-feedback@the-real-deal.com>",
   "types": "dist/index.d.ts",
