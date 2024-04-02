@@ -7,7 +7,6 @@
     "paths": {
       "the-real-deal/*": ["dist/src/*"],
       "the-real-deal": ["dist/src/index.ts"],
-      "digest-fetch": ["./typings/digest-fetch"]
     },
     "noEmit": false,
     "declaration": true,
