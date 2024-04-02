@@ -9,7 +9,6 @@
       "the-real-deal/_shims/auto/*": ["deno/_shims/auto/*-deno"],
       "the-real-deal/*": ["deno/*"],
       "the-real-deal": ["deno/index.ts"],
-      "digest-fetch": ["./typings/digest-fetch"]
     },
     "noEmit": true,
     "declaration": true,
