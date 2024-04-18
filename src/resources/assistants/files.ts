@@ -93,6 +93,8 @@ export interface FileListResponse {
 
   has_more: boolean;
 
+  items: unknown;
+
   last_id: string;
 
   object: string;
