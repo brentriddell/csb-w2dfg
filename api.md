@@ -28,24 +28,6 @@ Methods:
 
 # Images
 
-## Generations
-
-Methods:
-
-- <code title="post /images/generations">client.images.generations.<a href="./src/resources/images/generations.ts">create</a>({ ...params }) -> ImagesResponse</code>
-
-## Edits
-
-Methods:
-
-- <code title="post /images/edits">client.images.edits.<a href="./src/resources/images/edits.ts">create</a>({ ...params }) -> ImagesResponse</code>
-
-## Variations
-
-Methods:
-
-- <code title="post /images/variations">client.images.variations.<a href="./src/resources/images/variations.ts">create</a>({ ...params }) -> ImagesResponse</code>
-
 # Embeddings
 
 Types:
