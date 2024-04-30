@@ -23,7 +23,7 @@ export {
   FineTuningJobListParams,
   FineTuningJobs,
 } from './fine-tuning-jobs/fine-tuning-jobs';
-export { Images } from './images/images';
+export { Images } from './images';
 export { Model, ModelDeleteResponse, Models } from './models';
 export { ModerationCreateResponse, ModerationCreateParams, Moderations } from './moderations';
 export {
