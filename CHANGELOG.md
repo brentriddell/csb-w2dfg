@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.1 (2024-05-02)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/brentriddell/csb-w2dfg/compare/v0.3.0...v0.3.1)
+
+### Chores
+
+* rebuild project due to codegen change ([#15](https://github.com/brentriddell/csb-w2dfg/issues/15)) ([502711e](https://github.com/brentriddell/csb-w2dfg/commit/502711ea4901e57c1f0012e0636b2996f65153e4))
+* rebuild project due to codegen change ([#17](https://github.com/brentriddell/csb-w2dfg/issues/17)) ([e9c0e6e](https://github.com/brentriddell/csb-w2dfg/commit/e9c0e6eb90063d27b82da7add16d9fe3a2328644))
+* rebuild project due to codegen change ([#18](https://github.com/brentriddell/csb-w2dfg/issues/18)) ([f32d496](https://github.com/brentriddell/csb-w2dfg/commit/f32d496a5f8029d01aa2e392719066f67ddddeda))
+
 ## 0.3.0 (2024-04-30)
 
 Full Changelog: [v0.2.0...v0.3.0](https://github.com/brentriddell/csb-w2dfg/compare/v0.2.0...v0.3.0)
